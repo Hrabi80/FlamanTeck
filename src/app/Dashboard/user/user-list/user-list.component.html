@@ -1,0 +1,27 @@
+<p>Table is just a mapping of objects to table rows with <code>ngFor</code></p>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Country</th>
+    <th scope="col">Area</th>
+    <th scope="col">Population</th>
+    <th scope="col">actions</th>
+    <th scope="col">...</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let country of countries; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>
+      <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="mr-2" style="width: 20px">
+      {{ country.name }}
+    </td>
+    <td>{{ country.mail }}</td>
+    <td>{{ country.tel  }}</td>
+    <td><button type="button" class="btn btn-info">Update</button></td>
+    <td><button type="button" class="btn btn-danger">Supprimer</button></td>
+  </tr>
+  </tbody>
+</table>

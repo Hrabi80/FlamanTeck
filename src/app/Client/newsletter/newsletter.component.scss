@@ -1,0 +1,99 @@
+
+.section-padding {
+    padding: 60px 0;
+  }
+
+
+  /* Subscribe Form */
+#subscribe {
+    background: #f2f2f2;
+  }
+  
+  .subscribe-inner {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .subscribe-inner .subscribe-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  .subscribe-inner p {
+    color: #888;
+    margin-bottom: 30px;
+  }
+  
+  .subscribe-inner .sub-btn {
+    margin: 0;
+    width: 12rem;
+    padding: 18px 40px;
+    min-width: 12rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .subscribe-inner .sub-btn i {
+    margin-right: 5px;
+  }
+  
+  .subscribe-inner .form-control {
+    position: relative;
+    background: #fff;
+    border: 1px solid #E91E63;
+    border-radius: 0px;
+    box-shadow: none;
+    color: #888999;
+    height: 55px;
+    margin-right: -1px;
+    width: 90%;
+  }
+  
+  .subscribe-inner .form-control:focus {
+    color: #212121;
+    background-color: #fff;
+    border-color: #E91E63;
+    outline: 0;
+  }
+  
+  .subscribe-inner .form-inline {
+    position: relative;
+    margin-bottom: 30px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+
+  button:focus {
+    outline: none !important;
+  }
+
+  .btn-common {
+    background-color: #E91E63;
+    position: relative;
+    z-index: 1;
+    height: 55px;
+  }
+  
+  .btn-common:hover {
+    color: #fff;
+    background: #F50057;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    height: 55px;
+  }
+  
+  .btn-border {
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+  }
+  
+  .btn-border:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+  }

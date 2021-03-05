@@ -1,0 +1,57 @@
+
+<a type="submit" routerLink="/dashboard/list_des_réalisations" class="btn btn-primary submit"> <i class="lni lni-angle-double-left"></i>Retour</a>
+<div class="container">
+    <form [formGroup]="form">
+        <div class="row">
+            <div class="col">
+                <div class="mb-3">
+                    <label  class="form-label title">Un titre</label>
+                    <input type="text" formControlName="title" class="form-control" placeholder="Ajouter un titre au réalisation suivante...">
+                  </div>
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label class="form-label name">Le type de service</label>
+                    <input type="text" formControlName="type" class="form-control" placeholder="Exemples: site vitrine - e commerce  - e-learning - desing ... ">
+                  </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                <div class="input-group mb-3 ">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" formControlName="domaine" class="form-control" placeholder="Lien utile (exemple): www.nom_domaine.fr" aria-label="Lien utile" aria-describedby="basic-addon1">
+                </div>
+                
+            </div>
+            <div class="col">
+                <div class="input-group mb-3 ">
+                    <span class="input-group-text" id="basic-addon1">Client</span>
+                <input type="text" formControlName="client" class="form-control" placeholder="Citez le nom de la sociétée..." aria-label="Lien utile" aria-describedby="basic-addon1">
+                </div>   
+            </div>
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Description</span>
+            <textarea class="form-control" formControlName="description" aria-label="With textarea" placeholder="Ajouter une description à propos cette réalisation..."></textarea>
+        </div>
+               <label class="form-label" for="customFile">Default file input example</label>
+                <input type="file" (change)="onFileChanged($event)" class="form-control"/>
+        
+               <button type="submit" (click)="addPortfolio()" class="btn btn-primary submit">Submit</button>
+
+        
+      </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+

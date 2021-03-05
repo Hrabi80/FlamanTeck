@@ -1,0 +1,44 @@
+<!-- Features Section Start -->
+<section id="features" class="section-padding">
+    <div class="container">
+      <div class="section-header text-center">          
+        <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Nos services</h2>
+        <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+          <div class="content-left">
+            <div class="box-item wow fadeInLeft" data-wow-delay="0.3s" *ngFor="let output of data | slice:-6:-3">
+              <span class="icon">
+                <i class="{{output.icon}}"></i>
+              </span>
+              <div class="text">
+                <h4>{{output.name}}</h4>
+                <p>{{output.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+          <div class="show-box wow fadeInUp" data-wow-delay="0.3s">
+            <img src="/assets/img/feature/intro-mobile.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+          <div class="content-right">
+            <div class="box-item wow fadeInRight" data-wow-delay="0.3s" *ngFor="let output of data | slice:-3">
+              <i class="fab fa-accusoft"></i>
+              <span class="icon">
+                <i class="{{output.icon}}"></i>
+              </span>
+              <div class="text">
+                <h4>{{output.name}}</h4>
+                <p>{{output.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Features Section End -->   

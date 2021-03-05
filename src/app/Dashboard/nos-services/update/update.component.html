@@ -1,0 +1,26 @@
+<br><br><br><br><br>
+
+<div class="center">
+    <div class="card">
+        <h5 class="card-header">Mis à jour de service : {{service.name}} </h5>
+        <div class="card-body">
+                <form [formGroup]="form">
+                    <div class="row">
+                        <div class="col col-lg-4 col-sm-4 col-md-4">
+                            <label for="formGroupExampleInput">Nom de service</label>
+                            <input type="text" class="form-control" formControlName="name" [(ngModel)]="service.name">
+                        </div>
+                        <div class="col col-lg-8 col-sm-8 col-md-8">
+                            <label for="formGroupExampleInput">Description</label>
+                            <input type="text" class="form-control" formControlName="description" [(ngModel)]="service.description">
+                        </div>
+                        <div class="col col-lg-8 col-sm-8 col-md-8">
+                            <label for="formGroupExampleInput">Icon</label>
+                            <input type="text" class="form-control" formControlName="icon" [(ngModel)]="service.icon">
+                        </div>
+                    </div>
+                </form>
+          <button class="btn btn-primary" (click)="update()">mis a jour</button>
+        </div>
+      </div>
+</div>

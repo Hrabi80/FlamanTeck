@@ -1,0 +1,27 @@
+<table>
+    <thead>
+      <tr>
+        <th colspan="4">List des emails</th>
+      </tr>
+      <tr>
+        <th>id</th>
+        <th>mail</th>
+        <th>date</th>
+        <th>delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+        <td>{{item.id}}</td>
+        <td>{{item.UserMail}}</td>
+        <td>{{item.date}}</td>
+        <td>
+        
+          <i class="material-icons button delete" (click)="delete(item.id)">delete</i>
+        </td>
+      </tr>
+      <tr>
+       
+      </tr>
+    </tbody>
+  </table>

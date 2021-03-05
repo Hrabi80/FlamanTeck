@@ -1,0 +1,157 @@
+#hero-area {
+  background-image: url(/assets/img/hero-area.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 650px;
+  position: relative;
+  overflow: hidden;
+  padding: 180px 0 80px;
+}
+
+#hero-area .contents .head-title {
+  color: #222222;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 60px;
+  margin-bottom: 10px;
+}
+
+#hero-area .contents .header-button {
+  margin-top: 20px;
+  color: #222222;
+  
+}
+
+#hero-area .contents .header-button .btn {
+  margin-right: 10px;
+}
+
+.sloder-img {
+  background: #34363a;
+}
+.devis{
+  background-color: #F97794;
+  color: rgb(255, 255, 255);
+}
+.ser{
+  background-color: #263238;
+  color: #ffff;
+}
+
+.img-fluid {
+  animation-name: inf;
+  animation-duration: 7s;
+ /* animation-delay: -2s; */
+  display: inline-block;
+  /*animation-name: inf; */
+    animation-iteration-count: infinite;
+  /*animation :tp-rotateplane 1.2s infinite ease-in-out; */
+ 
+}
+.contents h2{
+  animation-name : textShow;
+  animation-duration: 3s;
+}
+.contents p{
+  animation-name : textShow;
+  animation-duration: 4s;
+}
+.header-button{
+  animation-name : textShow;
+  animation-duration: 5s;
+}
+
+
+
+
+/* animations */ 
+@keyframes textShow{
+  from{
+    display: none;
+    top: 1700px;
+    position: relative;
+    display: inline-block;
+  }
+
+  to{
+   top: 0px;
+    position: relative;
+    display: inline-block;
+  }
+}
+@keyframes slidein {
+  from {
+    margin-left: 40%;
+     width: 0%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%; 
+    
+  }
+}
+
+@keyframes inf {
+  from {
+    bottom: 105px;
+    position: relative;
+  }
+  to{
+    bottom: 95px;
+    position: relative;
+  }
+}
+
+/*Responsive */ 
+@media (min-width: 992px) and (max-width: 1199px) {
+  #hero-area .contents .head-title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 767px) {
+
+  .intro-img {
+    margin-top: 20px;
+  }
+  
+  #hero-area .img-thumb {
+    display: none;
+  }
+  #hero-area .contents .head-title {
+    font-size: 22px;
+    line-height: 36px;
+    margin-bottom: 15px;
+  }
+  #hero-area .contents p {
+    font-size: 14px;
+  }
+  #hero-area {
+    padding: 120px 0 80px;
+  }
+  #hero-area .contents .btn {
+    margin: 5px 10px 10px 0px;
+  }
+  .text-wrapper {
+    padding: 60px 15px;
+  }
+  #hero-area .img-thumb {
+    display: none;
+  }
+  #hero-area .contents .head-title {
+    font-size: 22px;
+    line-height: 36px;
+    margin-bottom: 15px;
+  }
+  #hero-area .contents p {
+    font-size: 14px;
+  }
+  #hero-area {
+    padding: 120px 0 80px;
+  }
+  #hero-area .contents .btn {
+    margin: 5px 10px 10px 0px;
+  }
+  
+}

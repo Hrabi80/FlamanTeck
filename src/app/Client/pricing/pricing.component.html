@@ -1,0 +1,192 @@
+<!-- Subcribe Section Start -->
+<div id="subscribe" class="section">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-6 col-md-12 col-xs-12">
+          <div class="subscribe-form">
+            <div class="form-wrapper">
+              <div class="sub-title text-center">
+                <h3>Demandez un devis en ligne</h3>
+                <p>pour les codes de réduction!</p>
+              </div>
+              <form [formGroup]="formDevis">
+                <div class="row">
+                  <div class="col-12 form-line">
+                    <div class="form-group">
+                      <input type="text" class="form-control" formControlName="name" placeholder="Name">
+                    </div>
+                  </div>
+                
+                  <div class="col-12 form-line">
+                    <div class="form-group">
+                      <input type="email" class="form-control" formControlName="mail" placeholder="Email">
+                    </div> 
+                  </div>
+                  <div class="col-12 form-line">
+                    <div class="form-group">
+                      <input type="number" class="form-control" formControlName="tel" placeholder="numéro">
+                    </div> 
+                  </div>
+                  <div class="col-12 form-line">
+                   <br>
+                  <div class="row">
+                    <div class="col">
+                      <ul>
+                        <li *ngFor="let item of list_checked | slice:-6:-3">
+                         <input type="checkbox"
+                          (change)="changeChecked(item.id)"
+                         >
+                          <label>
+                            {{item.value}}
+                          </label>
+                        </li>  
+                      </ul>
+                    </div>
+                    <div class="col">
+                      <ul>
+                        <li *ngFor="let item of list_checked | slice:-3" >
+                          <input  type="checkbox" 
+                          (change)="changeChecked(item.id)"
+                          >
+                          <label>
+                            {{item.value}}
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                      
+                  </div>
+                  <div class="col-12">
+                      <br>
+                    <div class="form-submit">
+                      <button type="submit" (click) = "send()" [disabled]="formDevis.invalid" class="btn btn-common btn-effect" >Envoyer maintenant</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-xs-12">
+          <div class="sub-item-box">
+            <div class="icon-box">
+              <i class="lni-bullhorn"></i>
+            </div>
+            <div class="text-box">
+              <h4>DEMANDER UN DEVIS EN LIGNE</h4>
+              <p>Choisir les services Pour les questions de pré-vente, nous vous transmettons vers le service approprié..</p>
+            </div>
+          </div>
+          <div class="sub-item-box">
+            <div class="icon-box">
+              <i class="lni-book"></i>
+            </div>
+            <div class="text-box">
+              <h4>NOUS RECEVOIR </h4>
+              <p>Vous pouvez obtenir de l'aide en contactant notre assistance en direct via l'opérateur actif sur la page en bas à droite située.</p>
+            </div>
+          </div>
+          <div class="sub-item-box">
+            <div class="icon-box">
+              <i class="lni-timer"></i>
+            </div>
+            <div class="text-box">
+              <h4>PLANNIFIER UN MEETING
+              </h4>
+              <p>Vous pouvez nous envoyer un mail sur info@proxiweb.tn ou Appelez le 71 891 521.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+      expanded = false;
+
+        function showCheckboxes() {
+        var checkboxes = document.getElementById("checkboxes");
+        if (!expanded) {
+            checkboxes.style.display = "block";
+            expanded = true;
+        } else {
+            checkboxes.style.display = "none";
+            expanded = false;
+        }
+        }
+</script>
+<!--
+
+<div id="pricing" class="section pricing-section">
+   <div class="container">
+     <div class="section-header">          
+       <h2 class="section-title">PACKS & TARIFS</h2>
+       <span>Pricing</span>
+       <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis.</p>
+     </div>
+
+     <div class="row pricing-tables">
+       <div class="col-lg-4 col-md-4 col-xs-12">
+         <div class="pricing-table">
+           <div class="pricing-details">
+             <h2>Web development</h2>
+             <div class="price">49$ <span>/mo</span></div>
+             <ul>
+               <li>Consectetur adipiscing</li>
+               <li>Nunc luctus nulla et tellus</li>
+               <li>Suspendisse quis metus</li>
+               <li>Vestibul varius fermentum erat</li>
+               <li> - </li>
+             </ul>
+           </div>
+           <div class="plan-button">
+             <a href="#" class="btn btn-common btn-effect">Get Plan</a>
+           </div>
+         </div>
+       </div>
+
+       <div class="col-lg-4 col-md-4 col-xs-12">
+         <div class="pricing-table pricing-big">
+           <div class="pricing-details">
+             <h2>Plan personnalisé</h2>
+             <div class="price">99$ <span>/mo</span></div>
+             <ul>
+               <li>Deployment site web</li>
+               <li>création logo</li>
+               <li>strategie marketing</li>
+               <li>Vestibul varius fermentum erat</li>
+               <li> - </li>
+             </ul>
+           </div>
+           <div class="plan-button">
+             <a href="#" class="btn btn-common btn-effect">Buy Now</a>
+           </div>
+         </div>
+       </div>
+
+       <div class="col-lg-4 col-md-4 col-xs-12">
+         <div class="pricing-table">
+           <div class="pricing-details">
+             <h2>Plan Premium</h2>
+             <div class="price">199$ <span>/mo</span></div>
+             <ul>
+               <li>Conception&deployement site web</li>
+               <li>Plan marketing</li>
+               <li>gestion réseau sociaux</li>
+               <li>branding professionnel</li>
+               <li>Montage vidéo</li>
+             </ul>
+           </div>
+           <div class="plan-button">
+             <a href="#" class="btn btn-common btn-effect">Buy Now</a>
+           </div>
+         </div>
+       </div>
+
+     </div>
+   </div>
+ </div>
+-->
+
+

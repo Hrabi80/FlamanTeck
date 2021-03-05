@@ -1,0 +1,85 @@
+<input type="file" accept="image/*" (change)="upload($event)">
+
+<div class="container-fluid">
+  <h1>
+  Angular 10 Carousel Example
+  </h1>
+  <h2>Full tutorial in Techiediaries</h2>
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <div class="wrapper">
+        <img [src]="images[0]" alt="Random first slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>First Slide</h3>
+        <p> Angular 10 Carousel Example </p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-xs-12 blog-item">
+          <!-- Blog Item Starts -->
+          <div class="blog-item-wrapper">
+            <div class="blog-item-img">
+              <a href="single-post.html">
+                <img src="assets/img/blog/img1.jpg" alt="">
+              </a>                
+            </div>
+            <div class="blog-item-text"> 
+              <div class="date"><!--i class="lni-calendar"></i>-->www.client1.com</div>
+              <h3><a href="single-post.html">Site Vetrine pour lorem ipsum</a></h3>
+              <div class="plan-button">
+                <button class="btn btn-common btn-effect" style="background-color: #F97794;">voir plus</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-xs-12 blog-item">
+          <div class="blog-item-wrapper">
+            <div class="blog-item-img">
+              <a href="single-post.html">
+                <img src="assets/img/blog/img2.jpg" alt="">
+              </a>                
+            </div>
+            <div class="blog-item-text"> 
+              <div class="date">www.client1.com</div>
+              <h3><a href="single-post.html">How to Design a Website For Your App</a></h3>
+              <div class="plan-button">
+                <button class="btn btn-common btn-effect" style="background-color: #1DA1F2">voir plus</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-xs-12 blog-item">
+          <!-- Blog Item Starts -->
+          <div class="blog-item-wrapper">
+            <div class="blog-item-img">
+              <a href="single-post.html">
+                <img src="assets/img/blog/img3.jpg" alt="">
+              </a>                
+            </div>
+            <div class="blog-item-text"> 
+              <div class="date">www.client3.fr</div>
+              <h3><a href="single-post.html">Strategie de marketing pur lotem psium ldafpods</a></h3>
+              <div class="plan-button">
+                <button class="btn btn-common btn-effect" style="background-color: #263238">voir plus</button>
+              </div>
+            </div>
+          </div>
+          <!-- Blog Item Wrapper Ends-->
+        </div>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="wrapper">
+        <img [src]="images[2]"  alt="Random third slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Third Slide</h3>
+        <p>for full tutorial...</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  </div>
