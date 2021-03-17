@@ -35,6 +35,12 @@ import { UpdateRealisationComponent } from './Dashboard/realisations/update-real
 import { TestcompressComponent } from './testcompress/testcompress.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserListComponent } from './Dashboard/user/user-list/user-list.component';
+import { AddUserComponent } from './Dashboard/user/add-user/add-user.component';
+import { SideCustomerComponent } from './Customer/side-customer/side-customer.component';
+import { ProfileComponent } from './Customer/profile/profile.component';
+import { LoginCustomerComponent } from './Customer/login-customer/login-customer.component';
+import { UpdateUserComponent } from './Dashboard/user/update-user/update-user.component';
+
 
 
 
@@ -62,7 +68,13 @@ import { UserListComponent } from './Dashboard/user/user-list/user-list.componen
     AddRealisationComponent,
     UpdateRealisationComponent,
     TestcompressComponent,
-    UserListComponent
+    UserListComponent,
+    AddUserComponent,
+    SideCustomerComponent,
+    ProfileComponent,
+    LoginCustomerComponent,
+    UpdateUserComponent
+
   ],
   imports: [
     BrowserModule,

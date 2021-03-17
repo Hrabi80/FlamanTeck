@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './_guard/auth.guard';
+import { SuperGuard } from './_guard/super.guard';
 import { LoginComponent } from "../app/Dashboard/login/login.component";
 import { StandingPageComponent } from './Client/standing-page/standing-page.component';
 import { DashnavComponent } from './Dashboard/dashnav/dashnav.component';
@@ -14,12 +15,24 @@ import { AddRealisationComponent } from './Dashboard/realisations/add-realisatio
 import { UpdateRealisationComponent } from './Dashboard/realisations/update-realisation/update-realisation.component';
 import { TestcompressComponent } from './testcompress/testcompress.component';
 import { UserListComponent } from './Dashboard/user/user-list/user-list.component';
+import { AddUserComponent } from './Dashboard/user/add-user/add-user.component';
+import { SideCustomerComponent } from './Customer/side-customer/side-customer.component';
+import { ProfileComponent } from './Customer/profile/profile.component';
+import { LoginCustomerComponent } from './Customer/login-customer/login-customer.component';
+import { UpdateUserComponent } from './Dashboard/user/update-user/update-user.component';
+
 
 const routes: Routes = [
-  {path:"login", component : LoginComponent},
+  {path:"flamantech_panel_admin", component : LoginComponent},
   {path:"", component: StandingPageComponent},
   {path:"devis", component: PricingComponent},
   {path:"test", component: TestcompressComponent},
+  {path:"login", component: LoginCustomerComponent},
+  {path:"espace_client", component: SideCustomerComponent,
+    children:[
+      {path:"profile",component:ProfileComponent}
+    ] 
+  },
   {path:"dashboard", component: DashnavComponent,
     children:[
       {path:"list_des_services", component: ListComponent},
@@ -29,10 +42,14 @@ const routes: Routes = [
       {path:"list_des_réalisations", component: RealisationsComponent},
       {path:"ajouter_de_réalisation", component: AddRealisationComponent},
       {path:"update_réalisation/:id", component: UpdateRealisationComponent},
-      {path:"list_des_clients", component: UserListComponent}
+      {path:"list_des_clients", component: UserListComponent},
+      {path:"ajouter_un_client", component: AddUserComponent },
+      {path: "mis_a_jour_client", component: UpdateUserComponent}
+
+
      
     ],
-   canActivate : [AuthGuard]},
+    canActivate : [SuperGuard]},
  
 ];
 

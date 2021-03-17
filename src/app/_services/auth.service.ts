@@ -95,6 +95,38 @@ export class AuthService {
       return false;
     else return true;
   }
+
+  // Verify if the use is superAdmin or not
+  jwt:any;
+  isAdmin(){
+    this.jwt = localStorage.getItem('currentUser');
+    let jwtData = this.jwt.split('.')[1]
+    let decodedJwtJsonData = window.atob(jwtData)
+    let decodedJwtData = JSON.parse(decodedJwtJsonData)
+    let isAdmin = decodedJwtData.roles;
+    const mm = isAdmin.toString();
+    return this.myadminFn(mm);
+  }
+  myadminFn(role:string){
+    if(role[5]== 'S')
+    return true;
+    else return false;
+  }
+
+  logout22() :void {    
+    localStorage.setItem('isLoggedIn','false');    
+    localStorage.removeItem('token');    
+    }  
+
+    
+}
+
+
+
+
+
+
+
 /*
   public validate(username:string, password:string) {
     
@@ -154,8 +186,3 @@ export class AuthService {
     })
   }
 /*/
-  logout22() :void {    
-    localStorage.setItem('isLoggedIn','false');    
-    localStorage.removeItem('token');    
-    }    
-}

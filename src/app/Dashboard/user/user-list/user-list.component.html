@@ -1,4 +1,4 @@
-<p>Table is just a mapping of objects to table rows with <code>ngFor</code></p>
+<a type="button"  routerLink="/dashboard/ajouter_un_client" class="btn btn-info add_client">Ajouter client</a>
 
 <table class="table table-striped">
   <thead>
@@ -12,16 +12,16 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let country of countries; index as i">
-    <th scope="row">{{ i + 1 }}</th>
-    <td>
-      <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="mr-2" style="width: 20px">
-      {{ country.name }}
+  <tr  *ngFor="let item of data; index as i" >
+    <th scope="row"  *ngIf="item.name != 'Flamanteck'">{{ i + 1 }}</th>
+    <td  *ngIf="item.name != 'Flamanteck'">
+     
+      {{ item.name }}
     </td>
-    <td>{{ country.mail }}</td>
-    <td>{{ country.tel  }}</td>
-    <td><button type="button" class="btn btn-info">Update</button></td>
-    <td><button type="button" class="btn btn-danger">Supprimer</button></td>
+    <td  *ngIf="item.name != 'Flamanteck'">{{ item.mail }}</td>
+    <td  *ngIf="item.name != 'Flamanteck'">{{ item.tel  }}</td>
+    <td  *ngIf="item.name != 'Flamanteck'"><button type="button" class="btn btn-warning" routerLink='/dashboard/mis_a_jour_client'>Update</button></td>
+    <td  *ngIf="item.name != 'Flamanteck'"><button type="button" class="btn btn-danger" (click)="delete(item.id)">Supprimer</button></td>
   </tr>
   </tbody>
 </table>

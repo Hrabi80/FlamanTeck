@@ -1,0 +1,39 @@
+
+<div class="container">
+    <a type="button"  routerLink="/dashboard/list_des_clients" class="btn btn-danger retour">retour</a>
+
+    <div class="mycontainer">
+     <form [formGroup]="form">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nom de la société</label>
+            <input type="text" formControlName="username" class="form-control" placeholder="nom de société/client (ceci sera le username)...">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" formControlName="email" class="form-control" placeholder="name@example.com">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Ajouter un mot de passe</label>
+            <input type="password" formControlName="password" class="form-control"  placeholder="***************">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Numéro de phone</label>
+            <input type="text" formControlName="tel" class="form-control" placeholder="+216 xxx xxx xxx ...">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Lien utile</label>
+            <input type="text" formControlName="lient" class="form-control" placeholder="page facebook / site web ...">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="customFile">uplaod un avatar</label>
+            <input type="file"  (change)="onFileChanged($event)" class="form-control"/>
+       </div>
+
+       <button type="button"  (click)="updateUser()" class="btn btn-primary submit">Ajouter</button>
+    </form>
+</div>
+</div>

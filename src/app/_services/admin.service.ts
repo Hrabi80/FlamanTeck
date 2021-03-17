@@ -11,6 +11,7 @@ export class AdminService {
   private _url = environment.api_url + '/api';
   constructor(private _http: HttpClient) { }
 
+  //services methods
   getAllServices(): Observable<any>{
     return this._http.get(this._url+'/services/all').pipe(
       catchError(this.errorMgmt)
@@ -25,6 +26,11 @@ export class AdminService {
     return this._http.put(this._url+'/services/update/'+id,data);
   }
 
+  deleteService(id:any){
+    return this._http.delete(this._url+'/client/delete/'+id);
+  }
+
+  //Devis methods
   getAllDevices():Observable<any>{
     return this._http.get(this._url+'/devis/all').pipe(
       catchError(this.errorMgmt)
@@ -45,6 +51,7 @@ export class AdminService {
     return this._http.delete(this._url+'/newsletter/delete/'+id);
   }
 
+  //realisations methods
   AddRealisation(data:any){
     return this._http.post(this._url + '/realisation/add', data , {reportProgress:true , observe:'events'});
   }
@@ -54,6 +61,26 @@ export class AdminService {
       catchError(this.errorMgmt)
     );
   }
+  
+  //User methods
+  AddUser(data:any){
+    return this._http.post(this._url + '/client/add', data , {reportProgress:true , observe:'events'});
+  }
+
+  getAllUsers():Observable<any>{
+    return this._http.get(this._url+'/client/all').pipe(
+      catchError(this.errorMgmt)
+    );
+  }
+   
+  deleteUser(id:any){
+    return this._http.delete(this._url+'/client/delete/'+id);
+  }
+
+  getUserById(id:number):Observable<any>{
+    return this._http.get(this._url+'/Client/clientById/'+id);
+  }
+
 
 
 
