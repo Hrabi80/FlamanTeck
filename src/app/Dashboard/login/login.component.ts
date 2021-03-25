@@ -61,11 +61,41 @@ export class LoginComponent implements OnInit {
          this.auth.login2(this.f.userid.value,this.f.password.value);
         }  
       }
+      jwt:any;
+      myadminFn(role:string){
+        if(role[5]== 'S')
+        return true;
+        else return false;
+      }
+    
       logins(){
         this.auth.login2(this.f.userid.value, this.f.password.value)
         .pipe(first())
         .subscribe(
-          result => this.router.navigate(['dashboard']),
+          (result) => {
+
+            this.jwt = localStorage.getItem('currentUser');
+            let jwtData = this.jwt.split('.')[1]
+            let decodedJwtJsonData = window.atob(jwtData)
+            let decodedJwtData = JSON.parse(decodedJwtJsonData)
+        
+            let isAdmin = decodedJwtData.roles;
+           
+        
+        
+            
+            console.log('jwtData: ' + jwtData)
+            console.log('decodedJwtJsonData: ' + decodedJwtJsonData)
+            console.log('decodedJwtData: ' + decodedJwtData)
+            console.log('Is admin: ' + isAdmin);
+            const mm = isAdmin.toString();
+            console.log('Role test ,', this.myadminFn(mm));
+        
+            console.log("result",result);
+            if(this.myadminFn(mm)){
+              this.router.navigate(['dashboard'])
+            }else
+            this.router.navigate(['espace_client'])},
           err => this.error = 'Could not authenticate'
         );
         /*.subscribe((response) => {

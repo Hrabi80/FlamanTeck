@@ -1,7 +1,7 @@
 #features {
     background: #fff;
   }
-  
+  $pinky :#DC3DAA;
   #features .icon {
     display: inline-block;
     width: 60px;
@@ -57,7 +57,7 @@
   }
   
   #features .box-item .icon i {
-    color: #F63854;
+    color: $pinky;
     font-size: 30px;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
@@ -86,7 +86,7 @@
   }
   
   #features .box-item:hover h4 {
-    color: #F63854;
+    color: #390C72;
   }
   
   #features .show-box {

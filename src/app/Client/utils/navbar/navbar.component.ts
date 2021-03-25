@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
+ 
 })
 export class NavbarComponent implements OnInit {
 
@@ -12,4 +13,22 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  @HostListener('document:mousewheel', ['$event'])
+  onDocumentMousewheelEvent(event:any) {
+    let element = document.querySelector('.navbar');
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+      console.log("i scrolll ...");
+      element!.classList.add('navbar-inverse');
+    } else {
+      element!.classList.remove('navbar-inverse');
+    }
+  }
+
+ 
+
+ 
+
 }
+    
+
+

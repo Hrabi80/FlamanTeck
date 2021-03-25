@@ -6,34 +6,41 @@
      <form [formGroup]="form">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nom de la société</label>
-            <input type="text" formControlName="username" class="form-control" placeholder="nom de société/client (ceci sera le username)...">
+            <input type="text" formControlName="username" class="form-control" [(ngModel)]="myuser.username" placeholder="nom de société/client (ceci sera le username)...">
         </div>
 
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" formControlName="email" class="form-control" placeholder="name@example.com">
+            <input type="email" formControlName="email" [(ngModel)]="myuser.email" class="form-control" placeholder="name@example.com">
         </div>
 
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Ajouter un mot de passe</label>
-            <input type="password" formControlName="password" class="form-control"  placeholder="***************">
-        </div>
+        
 
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Numéro de phone</label>
-            <input type="text" formControlName="tel" class="form-control" placeholder="+216 xxx xxx xxx ...">
+            <input type="text" formControlName="tel"  [(ngModel)]="myuser.tel" class="form-control" placeholder="+216 xxx xxx xxx ...">
         </div>
 
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Lien utile</label>
-            <input type="text" formControlName="lient" class="form-control" placeholder="page facebook / site web ...">
+            <input type="text" formControlName="lient"  [(ngModel)]="myuser.lien" class="form-control" placeholder="page facebook / site web ...">
         </div>
-        <div class="mb-3">
-            <label class="form-label" for="customFile">uplaod un avatar</label>
-            <input type="file"  (change)="onFileChanged($event)" class="form-control"/>
-       </div>
+ 
 
        <button type="button"  (click)="updateUser()" class="btn btn-primary submit">Ajouter</button>
     </form>
+})  
+
+
+    <div class="card text-dark bg-light mb-3" style="margin-top: 20px;">
+        <div class="card-header">réinitialisation du mot de passe</div>
+        <div class="card-body">
+          <h5 class="card-title">Au cas votre client oubie son propre mot de passe.</h5>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Ajouter un mot de passe</label>
+            <input type="text" formControlName="password" [(ngModel)]="myuser.password" class="form-control"  placeholder="***************">
+        </div>
+          <a href="#" class="btn btn-primary">réinitialiser</a>
+    </div>
 </div>
 </div>

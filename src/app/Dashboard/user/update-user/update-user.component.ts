@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { HttpEventType } from '@angular/common/http';
 import { take } from 'rxjs/operators';
-import Swal from 'sweetalert2';
+import swal from 'sweetalert2';
 import { AdminService } from 'src/app/_services/admin.service';
 @Component({
   selector: 'app-update-user',
@@ -10,14 +11,19 @@ import { AdminService } from 'src/app/_services/admin.service';
   styleUrls: ['./update-user.component.scss']
 })
 export class UpdateUserComponent implements OnInit {
+  id:any;
   form!: FormGroup;
+  formPassword!: FormGroup;
   SelectedIMG!:File;
   uploadResponse:any = { status: '', message: '', filePath: '' };
   error!: string;
+  myuser : any=[];
   constructor(private  _fb: FormBuilder,
+              private route : ActivatedRoute,
               private _service : AdminService) { }
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.paramMap.get('id');
     this.form = this._fb.group({
       username:  ['', [Validators.required, Validators.minLength(3)]],
       email:  ['', [Validators.required, ]],
@@ -25,6 +31,16 @@ export class UpdateUserComponent implements OnInit {
       tel: [''],
       lient:  [''],
       photo: ['']
+    });
+
+    this.formPassword = this._fb.group({
+      password: ['', [Validators.required, ]],
+    });
+
+    this._service.getUserById(this.id)
+    .subscribe((res)=>{
+      console.log("userX",res);
+      this.myuser = res;
     });
   }
 
@@ -51,7 +67,26 @@ export class UpdateUserComponent implements OnInit {
   }
 
   updateUser(){
-
+    this._service.updateUser(this.id,this.form.value).subscribe((res)=>{
+      console.log(res);
+      swal.fire(
+        'Mis à jour!',
+        'Ce client est maintenant ajour.',
+        'success'
+      )
+    });
   }
 
+  updatePassword(){
+    this._service.updatePassword(this.id,this.formPassword.value)
+    .subscribe((res)=>{
+      console.log(res);
+      swal.fire(
+        'Mis à jour!',
+        'Ce client est maintenant ajour.',
+        'success'
+      )
+    });
+ }
+ 
 }

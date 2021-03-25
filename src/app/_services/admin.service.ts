@@ -78,7 +78,15 @@ export class AdminService {
   }
 
   getUserById(id:number):Observable<any>{
-    return this._http.get(this._url+'/Client/clientById/'+id);
+    return this._http.get(this._url+'/client/clientById/'+id);
+  }
+
+  updateUser(id:number,data:any){
+    return this._http.put(this._url+'/client/update/'+id,data);
+  }
+
+  updatePassword(id:number, data:any){
+    return this._http.put(this._url+'/client/updatePassword/'+id,data);
   }
 
 

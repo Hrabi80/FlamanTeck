@@ -20,7 +20,7 @@
     </td>
     <td  *ngIf="item.name != 'Flamanteck'">{{ item.mail }}</td>
     <td  *ngIf="item.name != 'Flamanteck'">{{ item.tel  }}</td>
-    <td  *ngIf="item.name != 'Flamanteck'"><button type="button" class="btn btn-warning" routerLink='/dashboard/mis_a_jour_client'>Update</button></td>
+    <td  *ngIf="item.name != 'Flamanteck'"><button type="button" class="btn btn-warning" routerLink='/dashboard/mis_a_jour_client/{{item.id}}'>Update</button></td>
     <td  *ngIf="item.name != 'Flamanteck'"><button type="button" class="btn btn-danger" (click)="delete(item.id)">Supprimer</button></td>
   </tr>
   </tbody>

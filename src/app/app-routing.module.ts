@@ -23,12 +23,17 @@ import { UpdateUserComponent } from './Dashboard/user/update-user/update-user.co
 
 
 const routes: Routes = [
-  {path:"flamantech_panel_admin", component : LoginComponent},
+  {path:"login", component : LoginComponent},
   {path:"", component: StandingPageComponent},
   {path:"devis", component: PricingComponent},
   {path:"test", component: TestcompressComponent},
   {path:"login", component: LoginCustomerComponent},
-  {path:"espace_client", component: SideCustomerComponent,
+
+
+  {path:"espace_client", component:ProfileComponent ,   canActivate : [AuthGuard]},
+  
+  
+  {path:"espace_client2", component: SideCustomerComponent,
     children:[
       {path:"profile",component:ProfileComponent}
     ] 
@@ -44,7 +49,7 @@ const routes: Routes = [
       {path:"update_réalisation/:id", component: UpdateRealisationComponent},
       {path:"list_des_clients", component: UserListComponent},
       {path:"ajouter_un_client", component: AddUserComponent },
-      {path: "mis_a_jour_client", component: UpdateUserComponent}
+      {path: "mis_a_jour_client/:id", component: UpdateUserComponent}
 
 
      

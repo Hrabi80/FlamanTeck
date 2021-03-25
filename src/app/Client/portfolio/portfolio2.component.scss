@@ -45,7 +45,8 @@
   }
   
   #gallery .gallery-box:hover .overlay-box {
-    background: rgba(233, 30, 99, 0.7);
+    background: #652c9e;
+    opacity: 50%;
     transform: scale(1, 1);
     transition: all 500ms ease;
   }
