@@ -10,10 +10,9 @@ body {
   color: #546E7A;
   font-size: 14px;
   font-weight: 400;
-  background: #fff;
+  background: rgb(245, 244, 245) !important;
   overflow-x: hidden;
 }
-
 html {
   overflow-x: hidden;
 }
@@ -73,7 +72,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 }
 
 .bg-defult {
-  background: #F97794 !important;
+  background: #B92DB4 !important;
 }
 
 /* ==========================================================================
@@ -106,7 +105,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   bottom: -8px;
   width: 80px;
   height: 2px;
-  background: #F97794;
+  background: #B92DB4;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
@@ -134,7 +133,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   border-radius: 30px;
   font-weight: 400;
   color: #fff;
-  text-transform: uppercase;
+  
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -393,7 +392,7 @@ button:focus {
   font-size: 14px;
   text-align: center;
   border-radius: 30px;
-  background-color: #F97794;
+  background-color: #B92DB4;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -410,7 +409,7 @@ button:focus {
   height: 100%;
   top: 0px;
   left: 0px;
-  background: #F97794;
+  background: #B92DB4;
   opacity: 0.5;
   filter: alpha(opacity=80);
 }
@@ -784,6 +783,7 @@ button:focus {
    ========================================================================== */
 #cta {
   background: url(../img/bg/bg-cta.jpg) fixed;
+ 
   background-size: cover;
 }
 

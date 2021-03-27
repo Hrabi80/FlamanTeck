@@ -42,7 +42,7 @@
   .subscribe-inner .form-control {
     position: relative;
     background: #fff;
-    border: 1px solid #E91E63;
+    border: 1px solid #B92DB4;
     border-radius: 0px;
     box-shadow: none;
     color: #888999;
@@ -54,7 +54,7 @@
   .subscribe-inner .form-control:focus {
     color: #212121;
     background-color: #fff;
-    border-color: #E91E63;
+    border-color: #B92DB4;
     outline: 0;
   }
   
@@ -71,7 +71,7 @@
   }
 
   .btn-common {
-    background-color: #DC3DAA;
+    background-color: #B92DB4;
     position: relative;
     z-index: 1;
     height: 55px;
@@ -79,7 +79,7 @@
   
   .btn-common:hover {
     color: #fff;
-    background: #DC3DAA;
+    background: #B92DB4;
     box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
     transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;

@@ -40,6 +40,7 @@ import { SideCustomerComponent } from './Customer/side-customer/side-customer.co
 import { ProfileComponent } from './Customer/profile/profile.component';
 import { LoginCustomerComponent } from './Customer/login-customer/login-customer.component';
 import { UpdateUserComponent } from './Dashboard/user/update-user/update-user.component';
+import { WhyusComponent } from './Client/whyus/whyus.component';
 
 
 
@@ -73,7 +74,8 @@ import { UpdateUserComponent } from './Dashboard/user/update-user/update-user.co
     SideCustomerComponent,
     ProfileComponent,
     LoginCustomerComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+    WhyusComponent
 
   ],
   imports: [

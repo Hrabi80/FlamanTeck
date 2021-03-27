@@ -20,95 +20,102 @@ $pinky :#DC3DAA;
 }
 #hero-area .contents .head-title {
   color: #f3f7fd;
-  font-size: 42px;
-  font-weight: 600;
+  font-size: 35px;
+  font-weight: 400;
   line-height: 60px;
   margin-bottom: 10px;
 }
 
 #hero-area .contents .header-button {
   margin-top: 20px;
-  color: #222222;
-  
 }
 
 #hero-area .contents .header-button .btn {
   margin-right: 10px;
 }
 
-.sloder-img {
-  background: #34363a;
-}
 a.devis{
    display:inline-block;
    padding:0.3em 1.2em;
    margin:0 0.3em 0.3em 0;
-  border-radius:2em;
-  box-sizing: border-box;
-  text-decoration:none;
-  font-family:'Roboto',sans-serif;
-  font-weight:300;
-  
-  text-align:center;
-  transition: all 0.2s;
-  background-color: transparent;
-  color: white;
-
-  border-color: $pinky;
-  border: solid 4px $pinky;
+   border-radius:2em;
+   box-sizing: border-box;
+   text-decoration:none;
+   font-family:'Roboto',sans-serif;
+   font-weight:400;
+   text-align:center;
+   transition: all 0.2s;
+   background-color: transparent;
+   color: white;
+   border-color: $pinky;
+   border: solid 2px $pinky;
 }
 a.ser{
-  display:inline-block;
+   display:inline-block;
    padding:0.3em 1.2em;
    margin:0 0.3em 0.3em 0;
-  border-radius:2em;
-  box-sizing: border-box;
-  text-decoration:none;
-  font-family:'Roboto',sans-serif;
-  font-weight:300;
-  
-  text-align:center;
-  transition: all 0.2s;
-  background-color: $pinky;
-  color: #ffff;
+   border-radius:2em;
+   box-sizing: border-box;
+   text-decoration:none;
+   font-family:'Roboto',sans-serif;
+   font-weight:400;
+   text-align:center;
+   transition: all 0.2s;
+   background-color: $pinky;
+   color: #ffff;
 }
 
 a.ser:hover{
    background-color:transparent;
-  }
-  a.devis:hover{
-    background-color:$pinky;
-    border-color: rgb(29, 29, 29);
-   }
-  @media all and (max-width:30em){
+   border: solid 2px $pinky;
+}
+
+a.devis:hover{
+   background-color:$pinky;
+   border-color: rgb(73, 73, 73);
+}
+
+  
+
+@media all and (max-width:30em){
    a.ser{
     display:block;
     margin:0.2em auto;
     }
   }
-
+  #idk{
+    /*
+    animation-name: chatblips  ; 
+    animation-delay: 5s; */
+    animation-name:  monitorIn  ; 
+   
+  animation-iteration-count: 1 ;
+  }
+  
 .img-fluid {
-  animation-name: inf;
-  animation-duration: 7s;
- /* animation-delay: -2s; */
+  animation-name:  chatblips  ; 
+   
+  animation-iteration-count: 1 ;
+  animation-duration: 4s;
+  min-width: 490px;
+  max-width: 600px;
+ /* animation-delay: -2s;  */ 
   display: inline-block;
-  /*animation-name: inf; */
-    animation-iteration-count: infinite;
-  /*animation :tp-rotateplane 1.2s infinite ease-in-out; */
- 
+  margin-top: -150px !important;
 }
+
 .contents h2{
-  animation-name : textShow;
+  animation-name : monitorIn;
   animation-duration: 3s;
   color: white;
 }
 .contents p{
-  animation-name : textShow;
+  animation-name : monitorIn;
   animation-duration: 4s;
   color: white;
 }
 .header-button{
-  animation-name : textShow;
+  animation-name : monitorIn;
   animation-duration: 5s;
 }
 
@@ -164,6 +171,7 @@ a.ser:hover{
 
   .intro-img {
     margin-top: 20px;
+    
   }
   
   #hero-area .img-thumb {
@@ -176,6 +184,7 @@ a.ser:hover{
   }
   #hero-area .contents p {
     font-size: 14px;
+    
   }
   #hero-area {
     padding: 120px 0 80px;
@@ -205,3 +214,35 @@ a.ser:hover{
   }
   
 }
+
+
+
+@keyframes monitorIn{
+  from{
+      transform: translateY(-30px);
+      opacity: 0;
+  }
+  to{
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes chatblips{
+  /* taken from http://angrytools.com/css/animation/ for bounce-in animation*/
+  0%{
+      opacity: 0;
+      transform: scale(.3);
+    }
+    50%{
+      opacity: 1;
+      transform: scale(1.0);
+    }
+    70%{
+      transform: scale(0.9);
+    }
+    100%{
+      transform: scale(1);
+      opacity: 1;
+    }
+  }

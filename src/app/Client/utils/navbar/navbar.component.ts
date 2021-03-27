@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
   @HostListener('document:mousewheel', ['$event'])
   onDocumentMousewheelEvent(event:any) {
     let element = document.querySelector('.navbar');
-    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    if (document.body.scrollTop > 480 || document.documentElement.scrollTop > 480) {
       console.log("i scrolll ...");
       element!.classList.add('navbar-inverse');
     } else {

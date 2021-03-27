@@ -15,7 +15,7 @@
  *   changeHash: false,
  *   scrollSpeed: 750
  * });
- */
+ 
 
 ;(function($, window, document, undefined){
 
@@ -220,4 +220,4 @@
 		});
 	};
 
-})( jQuery, window , document );
+})( jQuery, window , document );*/

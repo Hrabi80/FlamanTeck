@@ -1,4 +1,5 @@
 /* Gallery Section */
+
 #gallery {
     background: #f3f4f3;
     position: relative;
@@ -7,6 +8,13 @@
   #gallery .gallery-box {
     position: relative;
     margin-bottom: 30px;
+    height: 250px;
+    width: 310px;
+    
+  }
+  #gallery img{
+    height: 250px;
+    width: 310px;
   }
   
   #gallery .gallery-box .overlay-box {
@@ -25,7 +33,7 @@
   
   #gallery .gallery-box .overlay-box i {
     background: #ffffff;
-    color: #E91E63;
+    color: #DC3DAA;
     font-size: 30px;
     width: 50px;
     height: 50px;
@@ -43,10 +51,10 @@
     -o-transition: all 500ms ease;
     transition: all 500ms ease;
   }
-  
+  $pinky2 : #B92DB4;
   #gallery .gallery-box:hover .overlay-box {
-    background: #652c9e;
-    opacity: 50%;
+    background: $pinky2;
+    opacity: 70%;
     transform: scale(1, 1);
     transition: all 500ms ease;
   }

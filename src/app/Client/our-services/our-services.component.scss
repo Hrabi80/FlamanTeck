@@ -1,7 +1,9 @@
-#features {
-    background: #fff;
-  }
+
   $pinky :#DC3DAA;
+  $pinky-M : #C629FA;
+  #features{
+    margin-bottom: 60px;
+  }
   #features .icon {
     display: inline-block;
     width: 60px;
@@ -34,12 +36,12 @@
   }
   
   #features .box-item {
-    box-shadow: 0 0 12px #F4F4F4;
+    box-shadow: 0 0 12px #e4e1e1;
     padding: 15px;
     line-height: 22px;
     margin-top: 30px;
     border-radius: 3px;
-    background-color: #fff;
+    background-color: rgb(248, 248, 248);
     -webkit-transition: all .3s ease-in-out;
     -mox-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
@@ -57,7 +59,7 @@
   }
   
   #features .box-item .icon i {
-    color: $pinky;
+    color: $pinky-M ;
     font-size: 30px;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
@@ -90,7 +92,7 @@
   }
   
   #features .show-box {
-    margin-top: 50px;
+    margin-top: 100px;
   }
   
   #features .show-box img {
