@@ -2,7 +2,7 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 $main_color: #0d0d0d;
-html, body { height: 100%; }
+html, body { height: 100%;  scroll-behavior: smooth !important;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* Importing Bootstrap SCSS file. */

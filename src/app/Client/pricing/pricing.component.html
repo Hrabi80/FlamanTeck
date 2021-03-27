@@ -35,6 +35,7 @@
                         <li *ngFor="let item of list_checked | slice:-6:-3">
                          <input type="checkbox"
                           (change)="changeChecked(item.id)"
+                          
                          >
                           <label>
                             {{item.value}}
@@ -60,7 +61,7 @@
                   <div class="col-12">
                       <br>
                     <div class="form-submit">
-                      <button type="submit" (click) = "send()" [disabled]="formDevis.invalid" class="btn btn-common btn-effect" >Envoyer maintenant</button>
+                      <button type="submit" (click) = "send()"  class="btn btn-common btn-effect" >Envoyer maintenant</button>
                     </div>
                   </div>
                 </div>

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
 /* BASIC */
-
+$pinky : #C629FA;
 html {
   background-color: #56baed;
 }
@@ -30,9 +30,11 @@ h2 {
 
 
 img {
-  max-height: 100px;
-  max-width: 100px;
-  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-height: 120px;
+  max-width: 150px;
+  border-radius: 10%;
 }
 /* STRUCTURE */
 
@@ -51,7 +53,7 @@ img {
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
-  background: #fff;
+  background: rgb(245, 243, 243);
   padding: 30px;
   width: 90%;
   max-width: 450px;
@@ -60,6 +62,7 @@ img {
   -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   text-align: center;
+  margin-top: -90px;
 }
 
 #formFooter {
@@ -89,7 +92,7 @@ h2.active {
 /* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #F97794;
+  background-color: $pinky;
   border: none;
   color: white;
   padding: 15px 80px;
@@ -111,7 +114,7 @@ input[type=button], input[type=submit], input[type=reset]  {
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: #39ace7;
+  background-color: $pinky;
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {

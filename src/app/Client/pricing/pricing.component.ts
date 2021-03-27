@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators ,FormControl} from '@angular/forms';
 import { PublicService } from 'src/app/_services/public.service';
 import swal from 'sweetalert2';
 
@@ -72,11 +72,16 @@ ngOnInit(): void {
       this.list_checked.push(this.data[3]);
       this.list_checked.push(this.data[4]);
       this.list_checked.push(this.data[5]);
+
       this.formDevis = this._fb.group({
-        name:  ['', [Validators.required, Validators.minLength(3)]],
-        mail:  ['', [Validators.required, Validators.email]],
-        tel:  ['', [Validators.required, Validators.pattern("^[0-9]*$"),Validators.minLength(8),Validators.maxLength(8)]],
-       //message:  ['', [Validators.required, Validators.minLength(6)]],    
+        name: new FormControl("", [Validators.required,  Validators.minLength(3)]),
+       // name:  ['', [Validators.required, Validators.minLength(3)]],
+        mail: new FormControl("", [Validators.required, Validators.email]),
+      //  email:  ['', [Validators.required, Validators.email]],
+       tel: new FormControl("", [Validators.required,  Validators.pattern("^[0-9]*$"),Validators.minLength(8),Validators.maxLength(8)]),
+      //  tel:  ['', [Validators.required, Validators.pattern("^[0-9]*$"),Validators.minLength(8),Validators.maxLength(8)]],
+       //message:  ['', [Validators.required, Validators.minLength(6)]],  
+     
       });
 
     });
