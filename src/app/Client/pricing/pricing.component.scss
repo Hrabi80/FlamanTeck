@@ -211,7 +211,7 @@
     .subscribe-form .form-wrapper .form-control:focus {
       color: #212121;
       background-color: #fff;
-      border-color: #F97794;
+      border-color: $pinky;
       box-shadow: none;
       outline: 0;
     }
@@ -234,7 +234,7 @@
     
     #subscribe .sub-item-box .icon-box i {
       font-size: 30px;
-      color: #F97794;
+      color: $pinky;
     }
     
     #subscribe .sub-item-box .text-box {

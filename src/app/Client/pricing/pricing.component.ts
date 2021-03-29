@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
-import { FormGroup, FormBuilder, Validators ,FormControl} from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { PublicService } from 'src/app/_services/public.service';
 import swal from 'sweetalert2';
 
@@ -20,6 +20,8 @@ export class PricingComponent implements OnInit {
    
   formDevis! :FormGroup;
   selectedItemsList: Array<any> = [];
+  constructor(private services : PublicService,
+              private  _fb: FormBuilder) { }
   data :Array<checkedOpt> =[
     {
         id:0,
@@ -54,10 +56,22 @@ export class PricingComponent implements OnInit {
   ];
   list_checked: Array<checkedOpt> =[];
   service_list: string="";
-  constructor(private services : PublicService,
-              private  _fb: FormBuilder) { }
+  
 
 ngOnInit(): void {
+
+  this.formDevis = this._fb.group({
+    name:  ['', [Validators.required, Validators.minLength(3)]],
+    mail:  ['', [Validators.required, Validators.email]],
+    tel:  ['', [Validators.required, Validators.pattern("^[0-9]*$"),Validators.minLength(8),Validators.maxLength(8)]],
+    c1:[''],
+    c2:[''],
+    c3:[''],
+    c4:[''],
+    c5:[''],
+    c0:[''],
+   //message:  ['', [Validators.required, Validators.minLength(6)]],    
+  });
     this.services.getAllServices()
     .subscribe((res)=>{
       for( var i=0; i< res.length ; i++){
@@ -73,16 +87,7 @@ ngOnInit(): void {
       this.list_checked.push(this.data[4]);
       this.list_checked.push(this.data[5]);
 
-      this.formDevis = this._fb.group({
-        name: new FormControl("", [Validators.required,  Validators.minLength(3)]),
-       // name:  ['', [Validators.required, Validators.minLength(3)]],
-        mail: new FormControl("", [Validators.required, Validators.email]),
-      //  email:  ['', [Validators.required, Validators.email]],
-       tel: new FormControl("", [Validators.required,  Validators.pattern("^[0-9]*$"),Validators.minLength(8),Validators.maxLength(8)]),
-      //  tel:  ['', [Validators.required, Validators.pattern("^[0-9]*$"),Validators.minLength(8),Validators.maxLength(8)]],
-       //message:  ['', [Validators.required, Validators.minLength(6)]],  
-     
-      });
+      
 
     });
 
@@ -121,7 +126,10 @@ send(){
     uploadData.append('mail', this.formDevis.get('mail')!.value);
     uploadData.append('tel', this.formDevis.get('tel')!.value);
     uploadData.append('services', this.service_list);
-    setTimeout(function(){ console.log(uploadData); }, 3000);
+    setTimeout(() => {
+      console.log("name", this.formDevis.get('name')!.value,this.formDevis.get('mail')!.value);
+
+    }, 2000);
 
 
   this.services.addDevis(uploadData).subscribe((res)=>{

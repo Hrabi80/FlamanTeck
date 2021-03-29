@@ -1,0 +1,76 @@
+<section id="contact" class="section">      
+    <div class="contact-form">
+      <div class="container">
+        <div class="section-header">          
+          <h2 class="section-title">Votre Message</h2>
+          <span>Contact</span>
+          <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis.</p>
+        </div>
+        <div class="row">          
+          <div class="col-lg-8 col-md-8 col-xs-12">
+            <div class="contact-block">
+              <form id="contactForm" [formGroup]="form">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" formControlName="name">
+                      <div class="help-block with-errors"></div>
+                    </div>                                 
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" placeholder="Votre email" id="email" class="form-control" formControlName="mail">
+                      <div class="help-block with-errors"></div>
+                    </div> 
+                  </div>
+                  
+                  <div class="col-md-12">
+                    <div class="form-group"> 
+                      <textarea class="form-control" id="message" placeholder="écrivez nous votre message..." rows="5" formControlName="message"></textarea>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="submit-button">
+                      <button class="btn btn-common btn-effect contbtn" (click)="sendMessage()" id="submit" type="submit">Envoyer un message</button>
+                      <div id="msgSubmit" class="h3 hidden"></div> 
+                      <div class="clearfix"></div> 
+                    </div>
+                  </div>
+                </div>            
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xs-12">
+            <div class="contact-deatils">
+              <!-- Content Info -->
+              <div class="contact-info_area">
+                <div class="contact-info">
+                  <i class="lni-map"></i>
+                  <h5>Location</h5>
+                  <p>1900 Pico Blvd, New York br Centernial, colorado</p>
+                </div>
+                <!-- Content Info -->
+                <div class="contact-info">
+                  <i class="lni-star"></i>
+                  <h5>E-mail</h5>
+                  <p>info@example.com</p>
+                </div>
+                <!-- Content Info -->
+                <div class="contact-info">
+                  <i class="lni-phone"></i>
+                  <h5>Phone</h5>
+                  <p>+48 123 456 789</p>
+                </div>
+                <!-- Icon -->
+                <ul class="footer-social">
+                  <li><a class="facebook" href="#"><i class="lni-facebook-filled"></i></a></li>
+                  <li><a class="twitter" href="#"><i class="lni-twitter-filled"></i></a></li>
+                  <li><a class="linkedin" href="#"><i class="lni-linkedin-fill"></i></a></li>
+                  <li><a class="google-plus" href="#"><i class="lni-google-plus"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>            
+  </section>

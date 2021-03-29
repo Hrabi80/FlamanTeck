@@ -1,0 +1,36 @@
+
+<div class="container">
+    <div class="mycontainer">
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">name</th>
+                <th scope="col">mail</th>
+                <th scope="col">message</th>
+                <th scope="col">date</th>
+                <th scope="col">delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of data">
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.message}}</td>
+                <td class="deleteTD">{{item.date}}</td>
+                <td>
+                    <a class="button" (click)="delete(item.id)" role="button">
+                    <span>remove</span>
+                    <div class="icon">
+                        <i class="fa fa-remove"></i>
+                        <i class="fa fa-check"></i>
+                    </div>
+                </a>
+            </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+

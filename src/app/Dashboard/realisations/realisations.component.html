@@ -21,8 +21,8 @@
                     {{item.description}}
                   </p>
                   <p class="card-text">
-                    <button type="button" class="btn btn-outline-warning btn-small">Update</button> &nbsp;
-                    <button type="button" class="btn btn-outline-danger btn-small">Supprimer</button>
+                    <button type="button" routerLink="/dashboard/update_réalisation/{{item.id}}"  class="btn btn-outline-warning btn-small">Update</button> &nbsp;
+                    <button type="button" (click)="delete(item.id)" class="btn btn-outline-danger btn-small">Supprimer</button>
                   </p>
                 </div>
               </div>

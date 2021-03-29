@@ -20,6 +20,8 @@ import { SideCustomerComponent } from './Customer/side-customer/side-customer.co
 import { ProfileComponent } from './Customer/profile/profile.component';
 import { LoginCustomerComponent } from './Customer/login-customer/login-customer.component';
 import { UpdateUserComponent } from './Dashboard/user/update-user/update-user.component';
+import { ListMessagesComponent } from './Dashboard/list-messages/list-messages.component';
+import { AddRepportComponent } from './Dashboard/user/add-repport/add-repport.component';
 
 
 const routes: Routes = [
@@ -49,7 +51,9 @@ const routes: Routes = [
       {path:"update_réalisation/:id", component: UpdateRealisationComponent},
       {path:"list_des_clients", component: UserListComponent},
       {path:"ajouter_un_client", component: AddUserComponent },
-      {path: "mis_a_jour_client/:id", component: UpdateUserComponent}
+      {path: "mis_a_jour_client/:id", component: UpdateUserComponent},
+      {path:"ajouter_rapport/:id", component: AddRepportComponent },
+      {path:"boite_des_messages", component:ListMessagesComponent}
 
 
      

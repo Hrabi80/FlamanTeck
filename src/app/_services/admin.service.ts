@@ -51,6 +51,16 @@ export class AdminService {
     return this._http.delete(this._url+'/newsletter/delete/'+id);
   }
 
+  getAllMessages():Observable<any>{
+    return this._http.get(this._url+'/contact/all').pipe(
+      catchError(this.errorMgmt)
+    );
+  }
+
+  deleteMessage(id:any){
+    return this._http.delete(this._url+'/contact/delete/'+id);
+  }
+
   //realisations methods
   AddRealisation(data:any){
     return this._http.post(this._url + '/realisation/add', data , {reportProgress:true , observe:'events'});
@@ -60,6 +70,18 @@ export class AdminService {
     return this._http.get(this._url+'/realisation/all').pipe(
       catchError(this.errorMgmt)
     );
+  }
+
+  getRealisationById(id:number):Observable<any>{
+    return this._http.get(this._url+'/realisation/realisationById/'+id);
+  }
+
+  updateRealisation(id:number,data:any){
+    return this._http.put(this._url+'/realisation/update/'+id,data);
+  }
+
+  deleteRealisation(id:any){
+    return this._http.delete(this._url+'/realisation/delete/'+id);
   }
   
   //User methods

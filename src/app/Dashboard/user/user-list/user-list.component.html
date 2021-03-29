@@ -7,8 +7,9 @@
     <th scope="col">Country</th>
     <th scope="col">Area</th>
     <th scope="col">Population</th>
+    <th scope="col">espace client</th>
     <th scope="col">actions</th>
-    <th scope="col">...</th>
+    <th scope="col">Retirer</th>
   </tr>
   </thead>
   <tbody>
@@ -20,6 +21,7 @@
     </td>
     <td  *ngIf="item.name != 'Flamanteck'">{{ item.mail }}</td>
     <td  *ngIf="item.name != 'Flamanteck'">{{ item.tel  }}</td>
+    <td  *ngIf="item.name != 'Flamanteck'"><button type="button" class="btn btn-secondary" routerLink='/dashboard/ajouter_rapport/{{item.id}}'>Rapport</button></td>
     <td  *ngIf="item.name != 'Flamanteck'"><button type="button" class="btn btn-warning" routerLink='/dashboard/mis_a_jour_client/{{item.id}}'>Update</button></td>
     <td  *ngIf="item.name != 'Flamanteck'"><button type="button" class="btn btn-danger" (click)="delete(item.id)">Supprimer</button></td>
   </tr>

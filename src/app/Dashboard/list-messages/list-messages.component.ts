@@ -1,44 +1,42 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from 'src/app/_services/admin.service';
-import { environment } from "src/environments/environment";
 import swal from 'sweetalert2';
+
 @Component({
-  selector: 'app-realisations',
-  templateUrl: './realisations.component.html',
-  styleUrls: ['./realisations.component.scss']
+  selector: 'app-list-messages',
+  templateUrl: './list-messages.component.html',
+  styleUrls: ['./list-messages.component.scss']
 })
-export class RealisationsComponent implements OnInit {
-  public _url = environment.api_url;
-  data : any=[];
+export class ListMessagesComponent implements OnInit {
+
   constructor(private _service : AdminService) { }
-
+  data:any=[];
   ngOnInit(): void {
-    this._service.getAllRealisations()
+    this._service.getAllMessages()
     .subscribe((res)=>{
-      this.data=res;
-      console.log("my data ", this.data)
-    })
+      this.data = res;
+      console.log(this.data);
+    });
   }
-
 
   delete(id:any){
     swal.fire({
      // type:'warning',
-      title: 'Vous etes sur de supprimer ce Portfolio ?',
-      text: 'Tout les informations à propos ce portfolio vont etre supprimées !',
+      title: 'Vous etes sur de supprimer ce message ?',
+      text: 'Ce message sera supprimé de votre base des données !',
       showCancelButton: true,
       confirmButtonColor: '#049F0C',
       cancelButtonColor:'#ff0000',
-      confirmButtonText: 'Yes, delete it!',
-      cancelButtonText: 'No, keep it',
+      confirmButtonText: 'Oui, le supprime!',
+      cancelButtonText: 'Non, laisse le !',
     }).then((res) => {
       if (res.value) {
-        this._service.deleteRealisation(id).subscribe(
+        this._service.deleteDevis(id).subscribe(
           data => {
             console.log(data);
             swal.fire(
               'Deleted!',
-              'Ce portfolio est supprimé.',
+              'Ce message est supprimé.',
               'success'
             );
             const index = this.data.findIndex((x: { id: any; }) => x.id ===id);

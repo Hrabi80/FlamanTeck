@@ -1,0 +1,47 @@
+$pinky : #C629FA;
+.contact-info {
+    margin-bottom: 1px;
+  }
+  
+  .contact-info i {
+    font-size: 17px;
+    color: $pinky;
+  }
+  
+  .contact-info h5 {
+    margin-bottom: 0;
+    margin-top: 1px;
+    font-size: 17px;
+    font-weight: 400;
+  }
+  
+  .contact-info p {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  
+  #contact {
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #contact .contact-block {
+    overflow: hidden;
+  }
+  
+  
+  
+  .footer-social li {
+    color: $pinky;
+    display: inline;
+    margin-right: 9px;
+  }
+
+  .contbtn{
+    background-color:$pinky ;
+    color: rgb(32, 32, 32);
+  }
+  .form-control{
+    box-shadow: 0 0 12px #e4e1e1;
+  }

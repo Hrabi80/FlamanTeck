@@ -1,61 +1,60 @@
+<aside class="sidebar">
+  <nav>
+      <ul class="sidebar__nav">
 
-<nav>
-    <ul>
-      <li>
-        
-        <div class="home-icon">
-          <div class="roof">
-            <div class="roof-edge"></div>
-          </div>
-          <div class="front"></div>
-        </div>
-      </li>
+        <li>
+            <a routerLink="/dashboard/list_des_clients" class="sidebar__nav__link">
+                <i class="mdi mdi-account-circle"></i>
+                <span class="sidebar__nav__text">Clients</span>
+            </a>
+        </li>
+          <li>
+              <a routerLink='/dashboard/list_des_devis' class="sidebar__nav__link">
+                  <i class="mdi  mdi-account-cash-outline"></i>
+                  
+                  <span class="sidebar__nav__text">Devis</span>
+              </a>
+          </li>
+          <li>
+            <a routerLink="/dashboard/list_des_réalisations" class="sidebar__nav__link">
+                <i class="mdi mdi-folder-clock-outline"></i>
+                <span class="sidebar__nav__text">Portfolio</span>
+            </a>
+        </li>
 
-      <li routerLink="/dashboard/list_des_clients">
-        <div class="sdsddswork-icons">
-          <i class="lni lni-users"></i>
-        </div>
-      </li>
-      <li routerLink="/dashboard/list_des_services">
-        <div class="about-icon">
-          <div class="head">
-            <div class="eyes"></div>
-            <div class="beard"></div>
-          </div>
-       
-        </div>
-      </li>
-      <li routerLink="/dashboard/list_des_devis">
-        <div class="about-icon">
-          <div class="heads">
-            <i class="lni lni-invest-monitor"></i>
-          </div>
-        </div>
-      </li>
-      <li routerLink="/dashboard/list_des_réalisations">
-        <div class="sdsddswork-icons">
-          <i class="lni lni-grow"></i>
-        </div>
-      </li>
-      <li routerLink="/dashboard/newsletter">
-        <div class="mail-icon">
-          <div class="mail-base">
-            <div class="mail-top"></div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <i class="lni lni-layers"></i>
-        
-      </li>
-      <li routerLink="/dashboard/list_des_réalisations">
-        <div class="sdsddswork-icons">
-          <i class="lni lni-power-switch"></i>
-        </div>
-      </li>
-    </ul>
+          <li>
+              <a routerLink="/dashboard/list_des_services" class="sidebar__nav__link">
+                
+                  <i class="mdi mdi-lightbulb-on"></i>
+                  <span class="sidebar__nav__text">Nos services</span>
+              </a>
+          </li>
+
+          <li>
+              <a routerLink="/dashboard/boite_des_messages" class="sidebar__nav__link">
+                  <i class="mdi mdi-message-bulleted"></i>
+                  <span class="sidebar__nav__text">Messages</span>
+              </a>
+          </li>
+          
+          <li>
+              <a routerLink="newsletter" class="sidebar__nav__link">
+                  <i class="mdi mdi-email-newsletter"></i>
+                  <span class="sidebar__nav__text">Newsletter</span>
+              </a>
+          </li>
+         
+          <li>
+              <a href="#" class="sidebar__nav__link">
+                  <button><i class="mdi mdi-power"></i>
+                  
+                  <span class="sidebar__nav__text">Déconnecter</span> </button>
+              </a>
+          </li>
+      </ul>
   </nav>
-  
+</aside>
+
   <section>
     <div class="container">
       <router-outlet></router-outlet>

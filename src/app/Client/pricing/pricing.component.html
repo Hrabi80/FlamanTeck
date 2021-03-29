@@ -13,13 +13,13 @@
                 <div class="row">
                   <div class="col-12 form-line">
                     <div class="form-group">
-                      <input type="text" class="form-control" formControlName="name" placeholder="Name">
+                      <input type="text" class="form-control" formControlName="name" placeholder="name">
                     </div>
                   </div>
                 
                   <div class="col-12 form-line">
                     <div class="form-group">
-                      <input type="email" class="form-control" formControlName="mail" placeholder="Email">
+                      <input type="email" class="form-control" formControlName="mail" placeholder="email">
                     </div> 
                   </div>
                   <div class="col-12 form-line">
@@ -32,10 +32,10 @@
                   <div class="row">
                     <div class="col">
                       <ul>
-                        <li *ngFor="let item of list_checked | slice:-6:-3">
+                        <li *ngFor="let item of list_checked | slice:-6:-3 ; index as i">
                          <input type="checkbox"
                           (change)="changeChecked(item.id)"
-                          
+                          formControlName="c{{i}}" 
                          >
                           <label>
                             {{item.value}}
@@ -45,9 +45,9 @@
                     </div>
                     <div class="col">
                       <ul>
-                        <li *ngFor="let item of list_checked | slice:-3" >
-                          <input  type="checkbox" 
-                          (change)="changeChecked(item.id)"
+                        <li *ngFor="let item of list_checked | slice:-3 ; index as i"  >
+                          <input  type="checkbox" formControlName="c{{i+3}}"
+                          (change)="changeChecked(item.id)" 
                           >
                           <label>
                             {{item.value}}
@@ -61,7 +61,7 @@
                   <div class="col-12">
                       <br>
                     <div class="form-submit">
-                      <button type="submit" (click) = "send()"  class="btn btn-common btn-effect" >Envoyer maintenant</button>
+                      <button type="submit" (click)="send()" name="submit" class="btn btn-common btn-effect" >Envoyer maintenant</button>
                     </div>
                   </div>
                 </div>

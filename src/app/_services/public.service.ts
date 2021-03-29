@@ -22,6 +22,9 @@ export class PublicService {
   addNewsletter(data:any){
     return this._http.post(this._url+'/newsletter/add',data);
   }
+  addMessage(data:any){
+    return this._http.post(this._url+'/contact/add',data);
+  }
   
   getAllRealisations():Observable<any>{
     return this._http.get(this._url+'/realisation/all').pipe(

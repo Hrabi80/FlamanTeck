@@ -817,9 +817,6 @@ button:focus {
   margin-bottom: 30px;
 }
 
-/* ==========================================================================
- Video promo Style
- ========================================================================== */
 .video-promo {
   background: url(../img/bg/video.jpg);
   position: relative;
@@ -852,9 +849,6 @@ button:focus {
   color: #fff;
 }
 
-/* ==========================================================================
-   Portfolio Section
-   ========================================================================== */
 #portfolios {
   background: #f9f9f9;
 }
@@ -1020,9 +1014,6 @@ button:focus {
   color: #DC3DAA;
 }
 
-/* ==========================================================================
-   Featured Section Start
-   ========================================================================== */
 .featured-box {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -1073,196 +1064,6 @@ button:focus {
   font-size: 14px;
 }
 
-/* ==========================================================================
- Team Section
-   ========================================================================== */
-.single-team:hover .team-details {
-  opacity: 1;
-}
-
-.single-team {
-  position: relative;
-  background: #f9f9f9;
-  border-radius: 4px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  box-shadow: 0px 10px 50px 0px rgba(84, 110, 122, 0.15);
-  border-radius: 0px;
-  overflow: hidden;
-}
-
-.single-team:hover {
-  -webkit-transform: translateY(-5px);
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 50px 0px rgba(84, 110, 122, 0.35);
-}
-
-.single-team img {
-  width: 100%;
-}
-
-.single-team .team-inner {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.single-team .team-details {
-  padding: 20px;
-  width: 100%;
-  text-align: center;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.single-team .team-details .team-title {
-  margin-bottom: 5px;
-  font-size: 18px;
-  font-weight: 500;
-  color: #263238;
-}
-
-.single-team .team-details p {
-  margin-bottom: 15px;
-}
-
-.single-team .social-list li {
-  display: inline-block;
-}
-
-.single-team .social-list li a {
-  display: block;
-  height: 34px;
-  line-height: 34px;
-  text-align: center;
-  width: 34px;
-  color: #F97794;
-  font-size: 14px;
-  background: #fff;
-  border-radius: 50px;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.single-team .social-list .facebook a:hover {
-  background: #4867aa;
-  color: #fff;
-}
-
-.single-team .social-list .twitter a:hover {
-  background: #1da1f2;
-  color: #fff;
-}
-
-.single-team .social-list .google-plus a:hover {
-  background: #dd4d42;
-  color: #fff;
-}
-
-.single-team .social-list .linkedin a:hover {
-  background: #007bb6;
-  color: #fff;
-}
-
-.testimonial {
-  background: #f9f9f9;
-}
-
-.testimonial-item {
-  padding: 30px;
-  margin: 15px;
-  background: #fff;
-  border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.testimonial-item .author {
-  display: inline-block;
-  margin-bottom: 20px;
-}
-
-.testimonial-item .author .img-thumb {
-  float: left;
-  overflow: hidden;
-  position: relative;
-}
-
-.testimonial-item .author .img-thumb img {
-  border-radius: 50%;
-  width: 75%;
-}
-
-.testimonial-item .author .author-info {
-  float: left;
-  padding: 3px 0;
-}
-
-.testimonial-item .author .author-info h2 {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 30px;
-  margin-bottom: 0;
-}
-
-.testimonial-item .author .author-info h2 a {
-  color: #484848;
-}
-
-.testimonial-item .author .author-info h2 a:hover {
-  color: #F97794;
-}
-
-.testimonial-item .content-inner {
-  overflow: hidden;
-}
-
-.testimonial-item .content-inner .description {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.testimonial-item .content-inner span {
-  color: #F97794;
-}
-
-.owl-pagination {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: -40px;
-}
-
-.owl-theme .owl-controls .owl-page {
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-}
-
-.owl-theme .owl-controls .owl-page span {
-  display: block;
-  width: 12px;
-  height: 12px;
-  margin: 2px 4px;
-  filter: alpha(opacity=50);
-  opacity: 1;
-  border-radius: 30px;
-  background: #fff;
-  border: 2px solid #fff;
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
-  transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-}
-
-.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
-  background: #F97794;
-}
-
-/* ==========================================================================
-  Pricing Table
-  ========================================================================== */
 .pricing-table {
   padding: 20px 0px 0px;
   margin: 0 auto;
@@ -1328,19 +1129,6 @@ button:focus {
   transform: scale3d(1.1, 1.1, 1.1);
 }
 
-/* ==========================================================================
-  Slider
-   ========================================================================== */
-
-
-/* ==========================================================================
-   Blog 
-   ========================================================================== */
-
-
-/* ==========================================================================
-   Contact Us
-  ========================================================================== */
 .form-control {
   width: 100%;
   margin-bottom: 20px;
@@ -1368,44 +1156,7 @@ textarea {
   border-radius: 4px !important;
 }
 
-.contact-info {
-  margin-bottom: 15px;
-}
 
-.contact-info i {
-  font-size: 20px;
-  color: #F97794;
-}
-
-.contact-info h5 {
-  margin-top: 5px;
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.contact-info p {
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-#contact {
-  background: #ffffff;
-  position: relative;
-  overflow: hidden;
-}
-
-#contact .contact-block {
-  overflow: hidden;
-}
-
-.text-danger {
-  font-size: 14px;
-  margin-top: 10px;
-}
-
-.list-unstyled li {
-  color: #d9534f;
-}
 
 /* Contact Map */
 #conatiner-map {
@@ -1475,18 +1226,6 @@ textarea {
   transition: all 0.3s;
 }
 
-/* ==========================================================================
-  19. Subscribe Style
-  ========================================================================== */
-
-
-/* ==========================================================================
-   Footer Style
-   ========================================================================== */
-
-/* ==========================================================================
- Counter Section Style
- ========================================================================== */
 .counters {
   background: url(../img/bg/bg-counter.jpg) fixed;
   position: relative;

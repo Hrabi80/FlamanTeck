@@ -1,1 +1,35 @@
-<p>update-realisation works!</p>
+<br><br><br><br><br>
+
+<div class="center">
+    <div class="card">
+        <h5 class="card-header">Mis à jour de portfolio : {{realisation.title}} </h5>
+        <div class="card-body">
+                <form [formGroup]="form">
+                    <div class="row">
+                        <div class="col col-lg-8 col-sm-8 col-md-8">
+                            <label for="formGroupExampleInput">Nom de portfolio</label>
+                            <input type="text" class="form-control" formControlName="title" [(ngModel)]="realisation.title">
+                        </div>
+                        <div class="col col-lg-8 col-sm-8 col-md-8">
+                            <label for="formGroupExampleInput">Type</label>
+                            <input type="text" class="form-control" formControlName="type" [(ngModel)]="realisation.type">
+                        </div>
+                        <div class="col col-lg-8 col-sm-8 col-md-8">
+                            <label for="formGroupExampleInput">Nom de client</label>
+                            <input type="text" class="form-control" formControlName="client" [(ngModel)]="realisation.client">
+                        </div>
+                        <div class="col col-lg-8 col-sm-8 col-md-8">
+                            <label for="formGroupExampleInput">Domaine/lient de realisation</label>
+                            <input type="text" class="form-control" formControlName="domaine" [(ngModel)]="realisation.domaine">
+                        </div>
+                        <div class="col col-lg-8 col-sm-8 col-md-8">
+                            <label for="formGroupExampleInput">Description</label>
+                            <input type="text" class="form-control" formControlName="description" [(ngModel)]="realisation.description">
+                        </div>
+                        
+                    </div>
+                </form>
+          <button class="btn btn-primary" (click)="update()">mis a jour</button>
+        </div>
+      </div>
+</div>

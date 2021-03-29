@@ -41,6 +41,10 @@ import { ProfileComponent } from './Customer/profile/profile.component';
 import { LoginCustomerComponent } from './Customer/login-customer/login-customer.component';
 import { UpdateUserComponent } from './Dashboard/user/update-user/update-user.component';
 import { WhyusComponent } from './Client/whyus/whyus.component';
+import { TeamComponent } from './Client/team/team.component';
+import { ContactComponent } from './Client/contact/contact.component';
+import { ListMessagesComponent } from './Dashboard/list-messages/list-messages.component';
+import { AddRepportComponent } from './Dashboard/user/add-repport/add-repport.component';
 
 
 
@@ -75,7 +79,11 @@ import { WhyusComponent } from './Client/whyus/whyus.component';
     ProfileComponent,
     LoginCustomerComponent,
     UpdateUserComponent,
-    WhyusComponent
+    WhyusComponent,
+    TeamComponent,
+    ContactComponent,
+    ListMessagesComponent,
+    AddRepportComponent
 
   ],
   imports: [
